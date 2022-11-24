@@ -145,8 +145,8 @@ module.exports = {
 		],
 
 		// Import
-		'no-duplicate-imports': 'error',
 		'unused-imports/no-unused-imports': 'error',
+		'import/no-duplicates': 'error',
 		'import/namespace': [
 			'error',
 			{
@@ -157,6 +157,7 @@ module.exports = {
 			'error',
 			{
 				'groups': [
+					'type',
 					'builtin',
 					'external',
 					'internal',
