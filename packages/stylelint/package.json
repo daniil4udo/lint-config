@@ -1,0 +1,33 @@
+{
+  "name": "@democrance/stylelint-config",
+  "version": "0.1.0",
+  "description": "Democrance's Stylelint config",
+  "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
+  "license": "MIT",
+  "homepage": "https://github.com/daniil4udo/lint-config",
+  "keywords": [
+    "stylelint",
+    "stylelint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "peerDependencies": {
+    "stylelint": ">=14.0.0"
+  },
+  "dependencies": {
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-selector-no-empty": "^1.0.9"
+  },
+  "devDependencies": {
+    "stylelint": "^14.15.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@democrance/eslint-config",
+  "version": "0.1.0",
+  "description": "Democrance's ESLint config",
+  "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
+  "license": "MIT",
+  "homepage": "https://github.com/daniil4udo/lint-config",
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^0.26.3",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0"
+  }
+}
