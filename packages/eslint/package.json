@@ -20,7 +20,7 @@
     "eslint": ">=8.0.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^0.26.3",
+    "@antfu/eslint-config": "^0.31.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-unused-imports": "^2.0.0"
   },
