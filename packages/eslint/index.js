@@ -170,11 +170,18 @@ module.exports = {
 				'alphabetize': {
 					order: 'asc',
 				},
-				'pathGroups': [{
-					pattern: '@/**',
-					group: 'internal',
-					position: 'after',
-				}],
+				'pathGroups': [
+					{
+						pattern: '@/**',
+						group: 'internal',
+						position: 'after',
+					},
+					{
+						pattern: '~/**',
+						group: 'internal',
+						position: 'after',
+					},
+				],
 			},
 		],
 
