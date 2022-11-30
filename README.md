@@ -67,7 +67,7 @@ pnpm add -D stylelint @democrance/stylelint-config
 'use strict'
 
 module.exports = {
-	extends: '@democrance/stylelint-config'
+    extends: '@democrance/stylelint-config',
 }
 ```
 
