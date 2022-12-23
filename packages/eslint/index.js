@@ -183,6 +183,16 @@ module.exports = {
         // 	},
         // ],
 
+        // Semicolons (default, preferred in TypeScript):
+        '@typescript-eslint/member-delimiter-style': [
+            'error',
+            {
+                multiline: {
+                    delimiter: 'semi',
+                },
+            },
+        ],
+
         '@typescript-eslint/consistent-type-imports': 'error',
 
         // Import
@@ -287,4 +297,3 @@ module.exports = {
         ],
     },
 }
-
