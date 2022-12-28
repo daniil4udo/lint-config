@@ -16,18 +16,10 @@ module.exports = {
 
     extends: [
         '@antfu',
-
-        // Import
-        // https://github.com/benmosher/eslint-plugin-import
-        'plugin:import/errors',
-        'plugin:import/warnings',
-        'plugin:import/typescript',
-
         // 'plugin:putout/recommended',
     ],
 
     plugins: [
-        'import',
         'unused-imports',
         // 'putout',
     ],
