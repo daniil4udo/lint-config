@@ -1,6 +1,6 @@
 {
   "name": "@democrance/eslint-config",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Democrance's ESLint config",
   "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
   "license": "MIT",
