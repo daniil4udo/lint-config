@@ -2,22 +2,19 @@
   "name": "@democrance/stylelint-config",
   "version": "0.5.0",
   "description": "Democrance's Stylelint config",
-  "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
-  "license": "MIT",
-  "homepage": "https://github.com/daniil4udo/lint-config",
   "keywords": [
     "stylelint",
     "stylelint-config"
   ],
+  "homepage": "https://github.com/daniil4udo/lint-config",
+  "license": "MIT",
+  "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
   "main": "index.js",
   "files": [
     "*.js"
   ],
   "scripts": {
     "lint": "eslint . --config=index.js"
-  },
-  "peerDependencies": {
-    "stylelint": ">=14.0.0"
   },
   "dependencies": {
     "postcss-html": "^1.5.0",
@@ -27,11 +24,14 @@
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard-scss": "^8.0.0",
+    "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-selector-no-empty": "^1.0.9",
     "sugarss": "^4.0.1"
   },
   "devDependencies": {
-    "stylelint": "^15.5.0"
+    "stylelint": "^15.6.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=14.0.0"
   }
 }
