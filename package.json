@@ -1,6 +1,6 @@
 {
   "name": "@democrance/lint-config",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "MIT",
   "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
   "scripts": {
