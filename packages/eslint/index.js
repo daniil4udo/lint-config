@@ -1,17 +1,19 @@
-'use strict'
+'use strict';
+
+const INDENT = 4;
 
 module.exports = {
     // https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
     // This option interrupts the configuration hierarchy at this file
     // Remove this if you have an higher level ESLint config file (it usually happens into a monorepos)
-    root: true,
+    // root: true,
 
     parserOptions: {
         ecmaVersion: 2020,
     },
 
     globals: {
-        process: true,
+        process: 'readonly',
     },
 
     extends: [
@@ -20,12 +22,11 @@ module.exports = {
     ],
 
     plugins: [
-        'unused-imports',
         // 'putout',
     ],
 
     rules: {
-        // Only allow debugger in development
+        // ⌛️ process.env dependant rules
         'no-debugger': process.env.PRE_COMMIT ? 'error' : 'off',
 
         // Only allow `console.log` in development
@@ -34,10 +35,26 @@ module.exports = {
             : 'off',
 
         // 🛑 OFF RULES
+
+        // https://eslint.org/docs/latest/rules/no-tabs
         'no-tabs': 'off',
 
         // 🛠 RULES
 
+        'semi': [ 'off', 'always' ],
+        '@typescript-eslint/semi': [ 'error', 'always' ],
+
+        'arrow-parens': [
+            'error',
+            'as-needed',
+            {
+                // modifies the as-needed rule in order NOT to require parens if the function body
+                requireForBlockBody: false,
+            },
+        ],
+
+        // js | vue
+        // https://eslint.org/docs/latest/rules/array-bracket-spacing
         'array-bracket-spacing': [
             'error',
             'always',
@@ -45,89 +62,74 @@ module.exports = {
                 objectsInArrays: false,
             },
         ],
-        'brace-style': [
-            'warn',
-            'stroustrup',
-        ],
-        'comma-dangle': [
-            'error',
-            'always-multiline',
-        ],
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/eol-last
         'eol-last': [
             'error',
             'always',
         ],
-        'lines-between-class-members': [
-            'error',
-            'always',
-            { exceptAfterSingleLine: true },
-        ],
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/newline-per-chained-call
         'newline-per-chained-call': [
             'error',
             {
                 ignoreChainWithDepth: 3,
             },
         ],
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/no-await-in-loop
         'no-await-in-loop': 'error',
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/no-param-reassign
         'no-param-reassign': [
             'error',
             {
                 props: false,
             },
         ],
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/no-useless-concat
         'no-useless-concat': 'error',
-        'no-useless-escape': 'error',
-        'operator-assignment': [
-            'error',
-            'always',
-        ],
-        'prefer-destructuring': [
-            'warn',
-            {
-                array: false,
-                object: true,
-            },
-        ],
-        'quotes': [
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/no-useless-escape
+        // 'no-useless-escape': 'error',
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/operator-assignment
+        // 'operator-assignment': 'warn',
+
+        // 🟡 js
+        // https://eslint.org/docs/latest/rules/prefer-destructuring
+        // 'prefer-destructuring': [
+        //     'warn',
+        //     {
+        //         array: false,
+        //         object: true,
+        //     },
+        // ],
+
+        // 🟡 js | 🔵 ts
+        // https://eslint.org/docs/latest/rules/quotes
+        '@typescript-eslint/quotes': [
             'error',
             'single',
             {
                 allowTemplateLiterals: true,
             },
         ],
-        'space-before-function-paren': [
-            'error',
-            {
-                anonymous: 'always',
-                named: 'never',
-                asyncArrow: 'always',
-            },
-        ],
 
         // Indent configuration
-        'indent': [
-            'off',
-            4,
-            {
-                CallExpression: {
-                    arguments: 2,
-                },
-                FunctionDeclaration: {
-                    body: 1,
-                    parameters: 2,
-                },
-                FunctionExpression: {
-                    body: 1,
-                    parameters: 2,
-                },
-                SwitchCase: 1,
-                MemberExpression: 1,
-                ignoredNodes: [ 'ConditionalExpression' ],
-            },
-        ],
+        // 🟡 js | 🔵 ts
+        // https://eslint.org/docs/latest/rules/indent
         '@typescript-eslint/indent': [
             'error',
-            4,
+            INDENT,
             {
                 SwitchCase: 1,
                 VariableDeclarator: 1,
@@ -167,35 +169,23 @@ module.exports = {
                 offsetTernaryExpressions: true,
             },
         ],
-        // 'vue/html-indent': [
-        // 	'error',
-        // 	'tab',
-        // 	{
-        // 		ignores: [ 'VElement[name=highlight-code].children' ],
-        // 	},
-        // ],
-
-        // Semicolons (default, preferred in TypeScript):
-        '@typescript-eslint/member-delimiter-style': [
-            'error',
-            {
-                multiline: {
-                    delimiter: 'semi',
-                },
-            },
-        ],
-
-        '@typescript-eslint/consistent-type-imports': 'error',
 
         // Import
-        'unused-imports/no-unused-imports': 'error',
-        'import/no-duplicates': 'error',
+
+        // 🟡 js | 🔵 ts
+        // 'import/no-duplicates': 'error',
+        // https://eslint.org/docs/latest/rules/no-duplicate-imports
+        'no-duplicate-imports': 'off',
+        '@typescript-eslint/no-duplicate-imports': [ 'error', { includeExports: true }],
+
+        // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/namespace.md
         'import/namespace': [
             'error',
             {
                 allowComputed: true,
             },
         ],
+
         'import/order': [
             'error',
             {
@@ -204,14 +194,16 @@ module.exports = {
                     'builtin',
                     'external',
                     'internal',
-                    'parent',
-                    'sibling',
+                    [ 'sibling', 'parent' ], // <- Relative imports, the sibling and parent types they can be mingled together
                     'index',
                     'unknown',
                 ],
                 'newlines-between': 'always',
                 'alphabetize': {
+                    /* sort in ascending order. Options: ["ignore", "asc", "desc"] */
                     order: 'asc',
+                    /* ignore case. Options: [true, false] */
+                    caseInsensitive: true,
                 },
                 'pathGroups': [
                     {
@@ -228,11 +220,21 @@ module.exports = {
             },
         ],
 
-        // Vue
+        // 🟢 vue
+        'vue/html-indent': [
+            'error',
+            INDENT,
+            {
+                ignores: [ 'VElement[name=highlight-code].children' ],
+            },
+        ],
+
+        // 🟢 vue
+        // https://eslint.vuejs.org/rules/attributes-order.html
         'vue/attributes-order': [
             'error',
             {
-                alphabetical: true,
+                alphabetical: false,
                 order: [
                     'DEFINITION',
                     [
@@ -252,6 +254,9 @@ module.exports = {
                 ],
             },
         ],
+
+        // 🟢 vue
+        // https://eslint.vuejs.org/rules/component-tags-order.html
         'vue/component-tags-order': [
             'error',
             {
@@ -263,6 +268,9 @@ module.exports = {
                 ],
             },
         ],
+
+        // 🟢 vue
+        // https://eslint.vuejs.org/rules/html-closing-bracket-newline.html
         'vue/html-closing-bracket-newline': [
             'error',
             {
@@ -270,7 +278,13 @@ module.exports = {
                 singleline: 'never',
             },
         ],
+
+        // 🟢 vue
+        // https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html
         'vue/html-closing-bracket-spacing': 'error',
+
+        // 🟢 vue
+        // https://eslint.vuejs.org/rules/max-attributes-per-line.html
         'vue/max-attributes-per-line': [
             'error',
             {
@@ -282,10 +296,12 @@ module.exports = {
                 },
             },
         ],
+
+        // 🟢 vue
+        // https://eslint.vuejs.org/rules/no-template-shadow.html
         'vue/no-template-shadow': 'error',
-        'vue/this-in-template': [
-            'error',
-            'never',
-        ],
+
+        // 🟢 vue
+        'vue/this-in-template': 'error',
     },
-}
+};
