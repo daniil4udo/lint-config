@@ -71,16 +71,10 @@ module.exports = {
         'scss/function-no-unknown': null,
 
         // Allow newlines inside class attribute values
-        'color-hex-case': 'lower',
         'color-hex-length': 'long',
         'comment-whitespace-inside': 'always',
-        'declaration-block-semicolon-space-before': 'never',
-        'declaration-block-trailing-semicolon': 'always',
         'function-url-quotes': 'always',
-        'indentation': 4,
-        'max-empty-lines': 2,
         'media-feature-name-no-unknown': null, // true,
-        'string-quotes': 'single',
 
         // ===
         // PROPERTY
@@ -122,13 +116,7 @@ module.exports = {
             1,
             { ignore: [ 'child', 'descendant', 'compounded' ] },
         ],
-        'selector-attribute-brackets-space-inside': 'never',
-        'selector-attribute-operator-space-after': 'never',
-        'selector-attribute-operator-space-before': 'never',
         'selector-attribute-quotes': 'always',
-        'selector-combinator-space-after': 'always',
-        'selector-list-comma-newline-before': 'never-multi-line',
-        'selector-list-comma-newline-after': 'always',
 
         // :deep() cannot be turned of
         'selector-pseudo-class-no-unknown': [
