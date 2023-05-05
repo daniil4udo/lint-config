@@ -1,6 +1,6 @@
 {
   "name": "@democrance/stylelint-config",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Democrance's Stylelint config",
   "keywords": [
     "stylelint",
