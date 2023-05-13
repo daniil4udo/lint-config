@@ -65,7 +65,9 @@ module.exports = {
         'function-no-unknown': null,
         'scss/function-no-unknown': null,
 
-        // Allow newlines inside class attribute values
+        // https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown/
+        'declaration-property-value-no-unknown': true,
+
         'color-hex-length': 'long',
         'comment-whitespace-inside': 'always',
         'function-url-quotes': 'always',
