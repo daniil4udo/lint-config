@@ -28,7 +28,7 @@
     "sugarss": "^4.0.1"
   },
   "devDependencies": {
-    "stylelint": "^15.6.0"
+    "stylelint": "^15.6.1"
   },
   "peerDependencies": {
     "stylelint": ">=14.0.0"
