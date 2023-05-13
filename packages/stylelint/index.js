@@ -11,11 +11,6 @@ module.exports = {
         // ===
         'stylelint-config-recess-order',
 
-        // Override rules that would interfere with Prettier
-        // https://github.com/shannonmoeller/stylelint-config-prettier
-        // ===
-        'stylelint-config-prettier',
-
         // Override rules to allow linting of CSS modules
         // https://github.com/pascalduez/stylelint-config-css-modules
         // ===
@@ -45,9 +40,9 @@ module.exports = {
     // - https://stylelint.io/user-guide/rules/
     // - https://github.com/kristerkari/stylelint-scss#list-of-rules
     rules: {
-    // ===
-    // Off rules
-    // ===
+        // ===
+        // Off rules
+        // ===
         'no-invalid-position-at-import-rule': null,
         'no-descending-specificity': null,
         'string-no-newline': null,
@@ -179,4 +174,4 @@ module.exports = {
             },
         ],
     },
-}
+};
