@@ -20,11 +20,11 @@ pnpm add -D eslint @democrance/eslint-config
 ### Config `.eslintrc.js`
 
 ```cjs
-'use strict'
+'use strict';
 
 module.exports = {
-  "extends": "@democrance"
-}
+    extends: '@democrance'
+};
 ```
 
 > You don't need `.eslintignore` normally as it has been provided by the preset.
@@ -64,11 +64,11 @@ pnpm add -D stylelint @democrance/stylelint-config
 ### Config `stylelint.config.js`
 
 ```js
-'use strict'
+'use strict';
 
 module.exports = {
     extends: '@democrance/stylelint-config',
-}
+};
 ```
 
 ## License
