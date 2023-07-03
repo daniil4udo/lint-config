@@ -1,6 +1,6 @@
 {
   "name": "@democrance/stylelint-config",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Democrance's Stylelint config",
   "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
   "license": "MIT",
@@ -24,13 +24,13 @@
     "postcss-scss": "^4.0.6",
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
-    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recess-order": "^4.2.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-selector-no-empty": "^1.0.9",
     "sugarss": "^4.0.1"
   },
   "devDependencies": {
-    "stylelint": "^15.6.2"
+    "stylelint": "^15.9.0"
   }
 }
