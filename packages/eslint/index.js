@@ -175,8 +175,8 @@ module.exports = {
         // 🟡 js | 🔵 ts
         // 'import/no-duplicates': 'error',
         // https://eslint.org/docs/latest/rules/no-duplicate-imports
-        'no-duplicate-imports': 'off',
-        '@typescript-eslint/no-duplicate-imports': [ 'error', { includeExports: true }],
+        'no-duplicate-imports': [ 'error', { includeExports: true }],
+        'import/no-duplicates': [ 'error', { 'prefer-inline': false }],
 
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/namespace.md
         'import/namespace': [
