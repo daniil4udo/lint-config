@@ -14,7 +14,8 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "eslint . --config=index.js"
+    "lint": "eslint . --config=index.js",
+    "inspect": "eslint --print-config ./index.js > ./.eslintrc.js"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
