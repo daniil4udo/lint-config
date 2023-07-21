@@ -39,6 +39,8 @@ module.exports = {
         // https://eslint.org/docs/latest/rules/no-tabs
         'no-tabs': 'off',
 
+        'n/prefer-global/process': [ 'error', 'always' ],
+
         // 🛠 RULES
 
         'semi': [ 'off', 'always' ],
