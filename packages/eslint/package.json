@@ -1,36 +1,42 @@
 {
-  "name": "@democrance/eslint-config",
-  "version": "0.9.0",
-  "description": "Democrance's ESLint config",
-  "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
-  "license": "MIT",
-  "homepage": "https://github.com/daniil4udo/lint-config",
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ],
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
-  "scripts": {
-    "lint": "eslint . --config=index.js",
-    "inspect": "eslint --print-config ./index.js > ./.eslintrc.js"
-  },
-  "peerDependencies": {
-    "eslint": ">=8.0.0"
-  },
-  "dependencies": {
-    "@antfu/eslint-config": "latest",
-    "@rushstack/eslint-patch": "latest",
-    "eslint-import-resolver-alias": "latest",
-    "eslint-plugin-cypress": "latest",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-unused-imports": "latest",
-    "eslint-plugin-vitest": "latest",
-    "eslint-plugin-vuejs-accessibility": "latest"
-  },
-  "devDependencies": {
-    "eslint": "^8.45.0"
-  }
+    "name": "@democrance/eslint-config",
+    "version": "0.9.0",
+    "description": "Democrance's ESLint config",
+    "keywords": [
+        "eslint",
+        "eslint-config"
+    ],
+    "homepage": "https://github.com/daniil4udo/lint-config",
+    "license": "MIT",
+    "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
+    "main": "index.js",
+    "files": [
+        "index.js"
+    ],
+    "scripts": {
+        "inspect": "eslint --print-config ./index.js > ./.eslintrc.js",
+        "lint": "eslint . --config=index.js"
+    },
+    "dependencies": {
+        "@antfu/eslint-config": "latest",
+        "@rushstack/eslint-patch": "latest",
+        "eslint-import-resolver-alias": "latest",
+        "eslint-plugin-cypress": "latest",
+        "eslint-plugin-i": "latest",
+        "eslint-plugin-unused-imports": "latest",
+        "eslint-plugin-vitest": "latest",
+        "eslint-plugin-vuejs-accessibility": "latest"
+    },
+    "devDependencies": {
+        "eslint": "^8.45.0"
+    },
+    "peerDependencies": {
+        "eslint": ">=8.0.0"
+    },
+    "pnpm": {
+        "overrides": {
+            "eslint-plugin-import": "npm:eslint-plugin-i@latest"
+        }
+    },
+    "packageManager": "pnpm@8.7.0"
 }

@@ -1,36 +1,37 @@
 {
-  "name": "@democrance/stylelint-config",
-  "version": "0.9.0",
-  "description": "Democrance's Stylelint config",
-  "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
-  "license": "MIT",
-  "homepage": "https://github.com/daniil4udo/lint-config",
-  "keywords": [
-    "stylelint",
-    "stylelint-config"
-  ],
-  "main": "index.js",
-  "files": [
-    "*.js"
-  ],
-  "scripts": {
-    "lint": "eslint . --config=index.js"
-  },
-  "peerDependencies": {
-    "stylelint": ">=14.0.0"
-  },
-  "dependencies": {
-    "postcss-html": "^1.5.0",
-    "postcss-scss": "^4.0.6",
-    "stylelint-config-css-modules": "latest",
-    "stylelint-config-idiomatic-order": "latest",
-    "stylelint-config-recess-order": "latest",
-    "stylelint-config-recommended-vue": "latest",
-    "stylelint-config-standard-scss": "latest",
-    "stylelint-selector-no-empty": "latest",
-    "sugarss": "^4.0.1"
-  },
-  "devDependencies": {
-    "stylelint": "^15.10.2"
-  }
+    "name": "@democrance/stylelint-config",
+    "version": "0.9.0",
+    "description": "Democrance's Stylelint config",
+    "keywords": [
+        "stylelint",
+        "stylelint-config"
+    ],
+    "homepage": "https://github.com/daniil4udo/lint-config",
+    "license": "MIT",
+    "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
+    "main": "index.js",
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "lint": "eslint . --config=index.js"
+    },
+    "dependencies": {
+        "postcss-html": "^1.5.0",
+        "postcss-scss": "^4.0.6",
+        "stylelint-config-css-modules": "latest",
+        "stylelint-config-idiomatic-order": "latest",
+        "stylelint-config-recess-order": "latest",
+        "stylelint-config-recommended-vue": "latest",
+        "stylelint-config-standard-scss": "latest",
+        "stylelint-selector-no-empty": "latest",
+        "sugarss": "^4.0.1"
+    },
+    "devDependencies": {
+        "stylelint": "^15.10.2"
+    },
+    "peerDependencies": {
+        "stylelint": ">=14.0.0"
+    },
+    "packageManager": "pnpm@8.7.0"
 }
