@@ -21,6 +21,8 @@ module.exports = {
         // 'stylelint-no-unsupported-browser-features',
         // 'stylelint-selector-bem-pattern',
         'stylelint-selector-no-empty',
+
+        'stylelint-gamut',
     ],
 
     defaultSeverity: 'error',
@@ -50,7 +52,6 @@ module.exports = {
         'keyframes-name-pattern': null,
         'value-keyword-case': null,
 
-        'color-function-notation': null,
         'custom-property-pattern': null,
         'selector-class-pattern': null,
         'selector-id-pattern': null,
@@ -175,5 +176,11 @@ module.exports = {
                 ignoreAtRules: [ 'else' ],
             },
         ],
+
+        // https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+        'gamut/color-no-out-gamut-range': true,
+        'function-disallowed-list': [ 'rgba', 'hsla', 'rgb', 'hsl' ],
+        'color-function-notation': 'modern',
+        'color-no-hex': true,
     },
 };
