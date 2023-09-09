@@ -179,8 +179,8 @@ module.exports = {
 
         // https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
         'gamut/color-no-out-gamut-range': true,
-        'function-disallowed-list': [ 'rgba', 'hsla', 'rgb', 'hsl' ],
         'color-function-notation': 'modern',
-        'color-no-hex': true,
+        // 'function-disallowed-list': [ 'rgba', 'hsla', 'rgb', 'hsl' ],
+        // 'color-no-hex': true,
     },
 };
