@@ -43,6 +43,11 @@ module.exports = {
 
         // 🛠 RULES
 
+        'jsonc/indent': [
+            'error',
+            INDENT,
+        ],
+
         'semi': [ 'off', 'always' ],
         '@typescript-eslint/semi': [ 'error', 'always' ],
 
