@@ -35,10 +35,10 @@ For example:
 
 ```json
 {
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  }
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    }
 }
 ```
 
@@ -48,10 +48,10 @@ Create `.vscode/settings.json`
 
 ```json
 {
-  "prettier.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+    "prettier.enable": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }
 ```
 

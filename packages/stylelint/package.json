@@ -1,20 +1,24 @@
 {
     "name": "@democrance/stylelint-config",
     "version": "0.10.1",
+    "packageManager": "pnpm@8.7.0",
     "description": "Democrance's Stylelint config",
+    "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
+    "license": "MIT",
+    "homepage": "https://github.com/daniil4udo/lint-config",
     "keywords": [
         "stylelint",
         "stylelint-config"
     ],
-    "homepage": "https://github.com/daniil4udo/lint-config",
-    "license": "MIT",
-    "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
     "main": "index.js",
     "files": [
         "*.js"
     ],
     "scripts": {
         "lint": "eslint . --config=index.js"
+    },
+    "peerDependencies": {
+        "stylelint": ">=14.0.0"
     },
     "dependencies": {
         "postcss-html": "^1.5.0",
@@ -30,9 +34,5 @@
     },
     "devDependencies": {
         "stylelint": "^15.10.2"
-    },
-    "peerDependencies": {
-        "stylelint": ">=14.0.0"
-    },
-    "packageManager": "pnpm@8.7.0"
+    }
 }
