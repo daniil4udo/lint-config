@@ -8,7 +8,7 @@
         "prepare": "pnpm -r run stub",
         "inspect": "eslint --print-config ./.eslintrc.cjs > .eslintrc.json",
         "lint": "eslint . --fix",
-        "release": "bumpp package.json packages/*/package.json --commit --tag --no-push && pnpm -r publish --access public",
+        "release": "bumpp packages/*/package.json --commit 'release: 🔖 v' --tag --no-push && pnpm -r publish --access public",
         "test": "pnpm -r run test"
     },
     "devDependencies": {
