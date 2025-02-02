@@ -1,7 +1,8 @@
 {
     "name": "@democrance/lint-config",
+    "type": "module",
     "version": "0.10.1",
-    "packageManager": "pnpm@8.7.0",
+    "packageManager": "pnpm@10.0.0",
     "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
     "license": "MIT",
     "scripts": {
