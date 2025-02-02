@@ -1,7 +1,7 @@
 {
     "name": "@democrance/eslint-config",
+    "type": "module",
     "version": "0.11.1",
-    "packageManager": "pnpm@8.7.0",
     "description": "Democrance's ESLint config",
     "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
     "license": "MIT",
@@ -19,24 +19,25 @@
         "lint": "eslint . --config=index.js"
     },
     "peerDependencies": {
-        "eslint": ">=8.0.0"
+        "eslint": ">=9.0.0"
     },
     "dependencies": {
-        "@antfu/eslint-config": "^0.43.1",
-        "@rushstack/eslint-patch": "latest",
-        "eslint-import-resolver-alias": "latest",
-        "eslint-plugin-cypress": "latest",
-        "eslint-plugin-i": "latest",
-        "eslint-plugin-unused-imports": "latest",
-        "eslint-plugin-vitest": "latest",
-        "eslint-plugin-vuejs-accessibility": "latest"
+        "@antfu/eslint-config": "^4.1.0",
+        "@rushstack/eslint-patch": "^1.10.5",
+        "@vue/eslint-config-airbnb": "^8.0.0",
+        "@vue/eslint-config-prettier": "^10.2.0",
+        "@vue/eslint-config-standard": "^9.0.0",
+        "@vue/eslint-config-typescript": "^14.3.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-cypress": "^4.1.0",
+        "eslint-plugin-format": "^1.0.1",
+        "eslint-plugin-i": "^2.29.1",
+        "eslint-plugin-unused-imports": "^4.1.4",
+        "eslint-plugin-vitest": "^0.5.4",
+        "eslint-plugin-vue": "^9.32.0",
+        "eslint-plugin-vuejs-accessibility": "^2.4.1"
     },
     "devDependencies": {
-        "eslint": "^8.45.0"
-    },
-    "pnpm": {
-        "overrides": {
-            "eslint-plugin-import": "npm:eslint-plugin-i@latest"
-        }
+        "eslint": "^9.19.0"
     }
 }

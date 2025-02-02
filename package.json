@@ -7,14 +7,19 @@
     "scripts": {
         "prepare": "pnpm -r run stub",
         "inspect": "eslint --print-config ./.eslintrc.cjs > .eslintrc.json",
-        "lint": "eslint . --fix",
+        "lint": "eslint . --color --fix",
         "release": "bumpp packages/*/package.json --commit 'release: 🔖 v' --tag --no-push && pnpm -r publish --access public",
         "test": "pnpm -r run test"
     },
     "devDependencies": {
         "@democrance/eslint-config": "workspace:*",
-        "bumpp": "^9.2.0",
-        "eslint": "^8.48.0",
-        "typescript": "^5.2.2"
+        "bumpp": "^10.0.1",
+        "eslint": "^9.19.0",
+        "typescript": "^5.7.3"
+    },
+    "pnpm": {
+        "overrides": {
+            "eslint-plugin-import": "npm:eslint-plugin-i@latest"
+        }
     }
 }
