@@ -1,7 +1,7 @@
 {
     "name": "@democrance/stylelint-config",
     "type": "module",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Democrance's Stylelint config",
     "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
     "license": "MIT",
