@@ -2,11 +2,14 @@ import antfu from '@antfu/eslint-config';
 
 const INDENT = 4;
 
-export async function coreEslintConfigs(vue = true) {
+export async function coreEslintConfigs(options) {
     return antfu({
-        vue,
+        // vue: true,
         formatters: true,
-        css: vue,
+        // css: true,
+        // languageOptions: {
+        //     ...globals,
+        // },
 
         stylistic: {
             indent: INDENT,
@@ -103,29 +106,42 @@ export async function coreEslintConfigs(vue = true) {
                 order: 'asc',
                 type: 'natural',
             }],
+        },
 
-            ...vue && {
-                'vue/block-order': [ 'error', {
-                    order: [
-                        'template',
-                        'script',
-                        'style',
-                    ],
-                }],
+        ...options,
+    }, {
+        files: [ '**/*.vue' ],
 
-                'vue/max-attributes-per-line': [ 'error', {
-                    singleline: {
-                        max: 2,
-                    },
-                    multiline: {
-                        max: 1,
-                    },
-                }],
+        rules: {
+            // 'indent': 'off', // turn off the base indent rule to avoid conflicts
+            'style/indent': 'off',
 
-                'vue/custom-event-name-casing': [ 'error', 'kebab-case', {
-                    ignores: [],
-                }],
-            },
+            'vue/block-order': [ 'error', {
+                order: [
+                    'template',
+                    'script',
+                    'style',
+                ],
+            }],
+
+            'vue/max-attributes-per-line': [ 'error', {
+                singleline: {
+                    max: 2,
+                },
+                multiline: {
+                    max: 1,
+                },
+            }],
+
+            'vue/custom-event-name-casing': [ 'error', 'kebab-case', {
+                ignores: [],
+            }],
+
+            'vue/script-indent': [ 'error', INDENT, {
+                baseIndent: 1,
+                switchCase: 1,
+                ignores: [],
+            }],
         },
     }, {
         ignores: [

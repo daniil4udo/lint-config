@@ -1,3 +1,6 @@
 import democrance from '@democrance/eslint-config';
 
-export default await democrance(false);
+export default await democrance({
+    vue: false,
+    css: false,
+});
