@@ -14,9 +14,9 @@
     },
     "devDependencies": {
         "@democrance/eslint-config": "workspace:*",
-        "bumpp": "^10.0.1",
-        "eslint": "^9.19.0",
-        "typescript": "^5.7.3"
+        "bumpp": "^10.0.3",
+        "eslint": "^9.22.0",
+        "typescript": "^5.8.2"
     },
     "pnpm": {
         "overrides": {
