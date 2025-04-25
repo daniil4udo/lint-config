@@ -2,7 +2,7 @@
     "name": "@democrance/lint-config",
     "type": "module",
     "version": "0.10.1",
-    "packageManager": "pnpm@10.0.0",
+    "packageManager": "pnpm@10.9.0",
     "author": "Daniil Chumachenko <daniil4udo@gmail.com> (https://github.com/daniil4udo/)",
     "license": "MIT",
     "scripts": {
@@ -14,13 +14,8 @@
     },
     "devDependencies": {
         "@democrance/eslint-config": "workspace:*",
-        "bumpp": "^10.0.3",
-        "eslint": "^9.22.0",
-        "typescript": "^5.8.2"
-    },
-    "pnpm": {
-        "overrides": {
-            "eslint-plugin-import": "npm:eslint-plugin-i@latest"
-        }
+        "bumpp": "^10.1.0",
+        "eslint": "^9.25.1",
+        "typescript": "^5.8.3"
     }
 }

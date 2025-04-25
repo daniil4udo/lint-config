@@ -33,6 +33,6 @@
         "sugarss": "^5.0.0"
     },
     "devDependencies": {
-        "stylelint": "^16.15.0"
+        "stylelint": "^16.19.0"
     }
 }
